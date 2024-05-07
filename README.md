@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+# Task Manager App
+# Process Document Take Home Task
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In the React JS default folder structure (created by using `npx create-react-app <app-name>`) I have created a `components` folder which mainly contains the components of the app that we are going to build.
 
-## Available Scripts
+Initially, I have created a form which takes the task name and task description from the user. My next approach is to use Redux and Firebase databases to store the data and also to make it persistent.
 
-In the project directory, you can run:
+## Approach
 
-### `npm start`
+1. **Use Redux**: Get the data from the form through actions and reducers.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. **Connect with Firebase**: Connect the application with Firebase.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. **Add Form Details Action**: In the `addFormDetails` action, create a new document. Set the Status of the task as 'To Do' by default.
 
-### `npm test`
+4. **Display Tasks**: Get the data from the database and update the state. Implement real-time updates from the database if necessary. Create a component to display the data from the state.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5. **Task Item**: Each task item should have a Task Name, Task Description, and Task Status. Include update and delete buttons with each task item.
 
-### `npm run build`
+6. **Update and Delete**: Implement update and delete actions. Use the document ID fetched from the database to perform the delete action. For the update action, convert the specific task into a form. Allow editing of task name, task description, and task status. Display predefined options for the status to the user.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+7. **Submit Form**: When updating tasks, the data needs to go through Redux and be updated to the database upon form submission.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+8. **Search Feature**: Implement searching with a dropdown to select options. Use `useEffect` Hook to filter the state based on the selected option. Display the required list of items accordingly.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
